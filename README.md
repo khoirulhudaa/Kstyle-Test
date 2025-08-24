@@ -39,7 +39,7 @@ Dulu, kita sering banget repot dengan kombinasi useEffect, useState, dan berbaga
 
 -----------------------------------------------------------
 
-# 🚀 Langkah Menjalankan Proyek
+## 🚀 Langkah Menjalankan Proyek
 
 1. **Clone Repository**
 ```bash
