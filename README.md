@@ -1,56 +1,55 @@
-## Penjelasan Props dengan TypeScript
+## ✅Pemahaman Mengenai Props dengan TypeScript
 
-**Props** adalah cara untuk mengirim data dari *parent* ke *child component* di React. Props bersifat **read-only**, yang membuat komponen lebih **modular** dan **reusable**. Dengan **TypeScript**, kita bisa mendefinisikan tipe untuk props agar aman dan mencegah error.
+Sebagai frontend developer, menurut saya props di TypeScript itu bukan cuma soal menentukan tipe saja, tapi lebih ke cara menjaga struktur dan kontrak antar komponen biar tetap jelas dan aman.
+
+Dengan TypeScript, props dapat didefinisikan dengan tipe data yang ketat menggunakan interface atau type. Ini memastikan bahwa data yang dikirimkan ke komponen sesuai dengan tipe yang diharapkan, mengurangi risiko kesalahan selama pengembangan.
 
 ### Contoh:
-```tsx
-interface MyComponentProps {
-  name: string;
-  age?: number;
-  onClick: () => void;
-}
+```jsx
+  interface MyComponentProps {
+    name: string;
+    age?: number;
+    onClick: () => void;
+  }
+  
+  const MyComponent: React.FC<MyComponentProps> = ({ name, age, onClick }) => {
+    return (
+      <div>
+        <p>Hello, {name}!</p>
+        {age && <p>Age: {age}</p>}
+        <button onClick={onClick}>Click Me</button>
+      </div>
+    );
+  };
+```
 
-const MyComponent: React.FC<MyComponentProps> = ({ name, age, onClick }) => {
-  return (
-    <div>
-      <p>Hello, {name}!</p>
-      {age && <p>Age: {age}</p>}
-      <button onClick={onClick}>Click Me</button>
-    </div>
-  );
-};
+## ✅Pemahaman Saya Mengenai TanStack
 
-## ✅ Keuntungan Menggunakan TypeScript untuk Props
+TanStack, khususnya TanStack Query (dulu dikenal sebagai React Query), menurut saya adalah game-changer banget dalam hal data fetching dan manajemen async state di React.
 
-- ✅ Type safety mencegah kesalahan tipe data.
-- ✅ Autocompletion di IDE.
-- ✅ Mendukung optional props (`?`) dan default props.
+Dulu, kita sering banget repot dengan kombinasi useEffect, useState, dan berbagai kondisi loading, error, success—yang bikin logic jadi berantakan. Dengan TanStack Query, semua itu bisa ditangani dengan cara yang jauh lebih clean dan efisien.
 
----
+### contoh
+```jsx
+  const { data, isLoading, error } = useQuery({
+    queryKey: ['user', userId],
+    queryFn: () => fetchUser(userId),
+  });
+```
 
-## 📦 Penjelasan TanStack
-
-TanStack adalah kumpulan library open-source untuk mengelola data, state, dan UI di aplikasi JavaScript/TypeScript.
-
-### 🔧 Beberapa Library Populer TanStack:
-
-- 📊 **TanStack Query**: Untuk fetching, caching, dan sinkronisasi data API.
-- 📋 **TanStack Table**: Untuk membuat tabel dinamis dengan fitur sorting dan filtering.
-- 🧭 **TanStack Router**: Router modern untuk React yang powerful dan fleksibel.
-
-### 🎯 Keuntungan Menggunakan TanStack:
-
-- ✅ Modular, headless, dan TypeScript-first.
-- ✅ Performa tinggi, cocok untuk aplikasi skala besar.
-- ✅ Dokumentasi lengkap dan aktif di [tanstack.com](https://tanstack.com)
-
+-----------------------------------------------------------
 
 # 🚀 Langkah Menjalankan Proyek
 
 1. **Clone Repository**
 ```bash
+
 git clone <repository-url>
+
 cd <project-directory>
+
 npm i --legacy-peer-deps 
+
 npm run dev
+
 access => http://localhost:3000
