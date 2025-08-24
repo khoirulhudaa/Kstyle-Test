@@ -1,3 +1,20 @@
+## 🚀 Langkah Menjalankan Proyek
+
+1. **Clone Repository**
+```bash
+
+git clone <repository-url>
+
+cd <project-directory>
+
+npm i --legacy-peer-deps 
+
+npm run dev
+
+access => http://localhost:3000
+
+---------------------------------------------------------------------------
+
 ## ✅Pemahaman Mengenai Props dengan TypeScript
 
 Sebagai frontend developer, menurut saya props di TypeScript itu bukan cuma soal menentukan tipe saja, tapi lebih ke cara menjaga struktur dan kontrak antar komponen biar tetap jelas dan aman.
@@ -36,20 +53,3 @@ Dulu, kita sering banget repot dengan kombinasi useEffect, useState, dan berbaga
     queryFn: () => fetchUser(userId),
   });
 ```
-
------------------------------------------------------------
-
-## 🚀 Langkah Menjalankan Proyek
-
-1. **Clone Repository**
-```bash
-
-git clone <repository-url>
-
-cd <project-directory>
-
-npm i --legacy-peer-deps 
-
-npm run dev
-
-access => http://localhost:3000
