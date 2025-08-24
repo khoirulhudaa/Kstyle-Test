@@ -1,6 +1,5 @@
 ## 🚀 Langkah Menjalankan Proyek
 
-1. **Clone Repository**
 ```bash
 
 git clone <repository-url>
@@ -12,6 +11,7 @@ npm i --legacy-peer-deps
 npm run dev
 
 access => http://localhost:3000
+```
 
 ---------------------------------------------------------------------------
 
