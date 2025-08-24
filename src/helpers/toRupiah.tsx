@@ -10,4 +10,4 @@ const formatToRupiah = (angka: any) => {
     .replace(/\s/g, ''); // Remove any spaces between the symbol and the number
 };
 
-export default formatToRupiah;
+export default formatToRupiah
